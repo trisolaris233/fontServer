@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Contribute</title>
+<h1>Contribute your font to us :)</h1>
+<form method=post enctype=multipart/form-data> 
+    <input type=file name=file><br>
+    <span>input the fontname below</span><br><input type=text name=filename><br>
+    
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="enable_preview" value="enable">enable preview
+        </label>
+    </div>
+    <input type=submit value=Upload><br>
+</form>
+
+<span style="color:red">{{ error }}</span>
+<span style="color:green">{{ success }}</span>

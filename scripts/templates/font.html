@@ -1,0 +1,13 @@
+<!doctype html>
+<title>{{ fobj.name }}</title>
+<h1>Font: {{ fobj.name }}</h1>
+<span>contributor: <u>{{ contributor }}</u></span><br>
+<span>import url: </span><a href="{{ fobj.url }}">{{ fobj.url }}</a><br>
+<br><br>
+<h2>preview:</h2>
+{% if fobj.preview %}
+<img src="{{ fobj.preview }}">
+{% else %}
+<span>the font just dont have a preview.</span>
+{% endif %}
+

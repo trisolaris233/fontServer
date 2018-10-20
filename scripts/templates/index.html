@@ -1,0 +1,8 @@
+
+<!doctype html>
+<h1>Fonts</h1>
+<ul>
+{% for font in fonts %}
+<li><a href=/fonts/{{ font.name }}/>{{ font.name }}</a></li>
+{% endfor %}
+</ul>
