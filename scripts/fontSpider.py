@@ -154,8 +154,6 @@ def find_font_by_name(fontname):
     return (True, font(row[1], row[3], row[2]))
 
     
-
-
 # 上传页
 @app.route('/contribute', methods=['GET', 'POST'])
 def contribute():
@@ -232,7 +230,11 @@ def index():
     res = read_fonts(-1)
     return render_template('index.html', fonts=res)
 
-# 初始化数据库
-init()
+
+if __name__ == "__main__":
+    # 初始化数据库
+    init()
+    app.run(host='0.0.0.0', port=2333)
+
 #     print(init()[1])
 #     print(insert_font("consolas4", "https://lose7.org/uploads/1.png")[1])
